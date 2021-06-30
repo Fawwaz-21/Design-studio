@@ -1,0 +1,57 @@
+.footer{
+    display: flex;
+    margin-top: 8rem;
+   flex-direction: column;
+   align-items: center;
+   @media screen and (max-width:600px) {
+    width: 190%;
+    margin: 0;
+    margin-top: 4rem;
+   height: 550px;
+
+}
+
+   &__h1-main{
+        color: $light-black;
+        font-weight: 300;
+        font-size: 3.2rem;
+   }
+    &__h1-sup{
+        font-family: 'Yellowtail', cursive;
+        color: $light-black;
+        font-weight: 300;
+        font-size: 3rem;
+    }
+
+    &__social{
+        display: flex;
+
+        
+        &-container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-facebook{
+           font-size: 1.5rem;
+           padding: 2rem;
+           text-decoration: none;
+           color: $light-black;
+           
+           &:hover{
+            color: $facebook-color;
+           }
+        }
+        &-insta{
+            font-size: 1.5rem;
+            padding: 2rem;
+            text-decoration: none;
+            color: $light-black;
+            &:hover{
+                color: $instagram-color;
+               }
+        }
+
+    }
+}

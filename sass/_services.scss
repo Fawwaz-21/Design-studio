@@ -1,0 +1,129 @@
+.services{
+    margin-top: 7rem;
+    background-image: linear-gradient(
+    180deg
+    , rgba(28, 43, 61, 0.7), rgba(28, 43, 61, 0.7)),url("../images/servicesBG.jpg");
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, scroll;
+    padding: 6rem;
+
+    @media screen and (max-width:600px) {
+        width: 190%;
+        margin: 0;
+    }
+
+    &__heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+        color: $white;
+    }
+
+    &__sup{
+        font-size: 1.7rem;
+        font-weight: bold;
+        padding-top: 5rem;
+    }
+
+    &__h1{
+        font-size: 6rem;
+        font-weight: bolder;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width:600px) {
+            flex-direction: column;
+            //align-items: center;
+        }
+    }
+
+    &__box{
+        display: flex;
+        //flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 5rem;
+        @media screen and (max-width:600px) {
+            flex-direction: column;
+            //align-items: center;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &-img{
+           width: 10rem;
+           margin-bottom: 2rem;
+        }
+
+        &-info{
+            display: flex;
+            flex-direction: column;
+            &-h1{
+              color: $white;
+              letter-spacing: 3px;
+            }
+
+            &-p{
+                color: $white;
+                font-size: 1.6rem;
+                letter-spacing: 3px;
+            }
+        }
+
+    }
+
+    &__container-2{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    &__button{
+        padding: 7rem;
+        margin-bottom: 4rem;
+        border : 2px solid currentColor;
+        border-radius :3rem;
+        color :$navy;
+        font-size :4rem;
+        font-weight : 100;
+        overflow : hidden;
+        padding : 1rem 2rem;
+       position : relative;
+        text-decoration : none;
+        transition : .2s transform ease-in-out;
+        will-change : transform;
+        z-index :0;
+
+        &::after{
+    background-color : $navy;
+    border-radius: 3rem;
+    content: '';
+    display : block;
+    height :100%;
+    width :100%;
+    position : absolute;
+    left :0;
+    top : 0;
+    transform : translate(-100%, 0) rotate(10deg);
+    transform-origin : top left;
+    transition :.2s transform ease-out;
+    will-change : transform;
+    z-index : -1;
+        }
+    
+  &:hover::after{
+    transform : translate(0, 0);
+  }
+    
+  &:hover{
+    border : 2px solid transparent;
+    color: $white;
+    transform :scale(1.05);
+    will-change: transform;
+  }
+    }
+}
